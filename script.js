@@ -39,11 +39,6 @@ const galleryData = [
         alt: { it: 'Progetto ispirato a Rufy', en: 'Luffy-inspired project' }
       },
       {
-        title: { it: 'Rufy Portrait', en: 'Luffy Portrait' },
-        image: 'images/rufy.PNG',
-        alt: { it: 'Ritratto di Rufy', en: 'Luffy portrait' }
-      },
-      {
         title: { it: 'Brook', en: 'Brook' },
         image: 'images/brook.jpg',
         alt: { it: 'Progetto ispirato a Brook', en: 'Brook-inspired project' }
