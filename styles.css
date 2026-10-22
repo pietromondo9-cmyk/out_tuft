@@ -1177,4 +1177,16 @@ h2 em {
   background-color: #b86e68;
   color: #ffffff;
 }
+/* Forma a campana per la foto principale */
+.hero-art {
+  border-radius: 48% 48% 18px 18px / 30% 30% 18px 18px;
+  overflow: visible;
+}
 
+.hero-art > img {
+  border-radius: 45% 45% 14px 14px / 28% 28% 14px 14px;
+}
+/* Forma coordinata per il video di cucitura */
+.about-side {
+  border-radius: 48% 48% 18px 18px / 30% 30% 18px 18px;
+}
