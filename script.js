@@ -17,48 +17,65 @@ let currentLanguage = 'it';
 let activeCategory = null;
 let lastFocusedElement = null;
 
+
 const galleryData = [
   {
-    id: 'pets',
-    title: { it: 'I tuoi pelosi', en: 'Your furry friends' },
-    items: [
+    id: "pets",
+    title: "Animali",
+    projects: [
       {
-        src: 'images/dog2.jpg',
-        title: { it: 'Un amico speciale', en: 'A special friend' },
-        alt: { it: 'Lavoro di tufting con cane', en: 'Tufting artwork featuring a dog' }
+        title: "Dog Rug",
+        image: "images/dog2.jpg"
       }
     ]
   },
   {
-    id: 'anime',
-    title: { it: 'Anime & pop culture', en: 'Anime & pop culture' },
-    items: [
+    id: "anime",
+    title: "Anime",
+    projects: [
       {
-        src: 'images/rufy2.jpg',
-        title: { it: 'Rufy', en: 'Luffy' },
-        alt: { it: 'Progetto di tufting ispirato a Rufy', en: 'Tufting artwork inspired by Luffy' }
+        title: "Rufy",
+        image: "images/rufy2.jpg"
+      },
+      {
+        title: "Rufy Portrait",
+        image: "images/rufy.PNG"
+      },
+      {
+        title: "Brook",
+        image: "images/brook.jpg"
+      },
+      {
+        title: "Zapdos",
+        image: "images/zapdos.PNG"
       }
     ]
   },
   {
-    id: 'home',
-    title: { it: 'Arredi', en: 'Home & interiors' },
-    items: [
+    id: "home",
+    title: "Arredamento",
+    projects: [
       {
-        src: 'images/arredo.jpg',
-        title: { it: 'Un dettaglio per la casa', en: 'A detail for the home' },
-        alt: { it: 'Progetto di tufting per arredo', en: 'Tufting artwork for the home' }
+        title: "Arredo",
+        image: "images/arredo.jpg"
       }
     ]
   },
   {
-    id: 'other',
-    title: { it: 'Altre ispirazioni', en: 'Other inspirations' },
-    items: [
+    id: "other",
+    title: "Altro",
+    projects: [
       {
-        src: 'images/piccolo-principe.jpg',
-        title: { it: 'Il Piccolo Principe', en: 'The Little Prince' },
-        alt: { it: 'Progetto ispirato al Piccolo Principe', en: 'Artwork inspired by The Little Prince' }
+        title: "Il Piccolo Principe",
+        image: "images/piccolo-principe.jpg"
+      },
+      {
+        title: "Platone",
+        image: "images/platone.jpg"
+      },
+      {
+        title: "Bitcoin",
+        image: "images/btc-logo.jpg"
       }
     ]
   }
