@@ -1148,3 +1148,10 @@ h2 em {
     aspect-ratio: 4 / 5;
   }
 }
+
+/* Logo con angoli morbidi */
+.wordmark img {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
