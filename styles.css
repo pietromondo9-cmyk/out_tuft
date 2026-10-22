@@ -1155,3 +1155,26 @@ h2 em {
   overflow: hidden;
 }
 
+
+/* Sezione contatti: rosa cipria più delicato */
+.commissions {
+  background-color: #f0d8d1;
+  color: #342b29;
+}
+
+.commissions h2,
+.commissions p,
+.commissions .eyebrow,
+.commissions .commission-foot {
+  color: #342b29;
+}
+
+.commissions .dot {
+  background-color: #b86e68;
+}
+
+.commissions .button-pink {
+  background-color: #b86e68;
+  color: #ffffff;
+}
+
