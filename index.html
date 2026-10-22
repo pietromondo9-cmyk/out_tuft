@@ -1,164 +1,483 @@
 <!doctype html>
 <html lang="it">
-  <link rel="icon" type="image/jpeg" href="images/out-tuft.jpg">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff8ed">
   <meta name="description" content="Out Tuft — il mio hobby: tappeti tuftati a mano, esperimenti e progetti personali. Handmade tufting and personal creative projects.">
+  <link rel="icon" type="image/jpeg" href="images/out-tuft.jpg">
   <title>Out Tuft — Un hobby di tufting</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="announcement"><span data-it="UN HOBBY FATTO DI FILI, IDEE E COLORE ✳" data-en="LET’S MAKE SOMETHING THAT FEELS LIKE YOU ✳">UN HOBBY FATTO DI FILI, IDEE E COLORE ✳</span></div>
+  <div class="announcement">
+    <span
+      data-it="UN HOBBY FATTO DI FILI, IDEE E COLORE ✳"
+      data-en="A HOBBY MADE OF YARN, IDEAS AND COLOUR ✳">
+      UN HOBBY FATTO DI FILI, IDEE E COLORE ✳
+    </span>
+  </div>
+
   <header class="site-header">
-  <a class="wordmark" href="#home" aria-label="Out Tuft - Home">
-  <img src="images/out-tuft.jpg" alt="Out Tuft" style="height:48px;width:auto;display:block;">
-</a>
-    <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="wordmark" href="#home" aria-label="Out Tuft - Home">
+      <img
+        src="images/out-tuft.jpg"
+        alt="Out Tuft"
+        style="height:48px;width:auto;display:block;">
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navigazione principale">
       <a href="#gallery" data-it="Lavori" data-en="Works">Lavori</a>
       <a href="#about" data-it="Il progetto" data-en="About">Il progetto</a>
       <a href="#commissions" data-it="Parliamone" data-en="Say hello">Parliamone</a>
     </nav>
+
     <div class="header-actions">
-      <button class="lang-switch" id="languageToggle" type="button" aria-label="Switch language">EN ↗</button>
-      <a class="social-link" href="https://www.instagram.com/out_tuft/" target="_blank" rel="noreferrer">IG ↗</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button
+        class="lang-switch"
+        id="languageToggle"
+        type="button"
+        aria-label="Cambia lingua">
+        EN ↗
+      </button>
+
+      <a
+        class="social-link"
+        href="https://www.instagram.com/out_tuft/"
+        target="_blank"
+        rel="noopener noreferrer">
+        IG ↗
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Apri il menu"
+        aria-expanded="false">
+        ☰
+      </button>
     </div>
   </header>
 
   <main>
     <section class="hero section-pad" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span><span data-it="TUFTING · HOBBY CREATIVO · FATTO A MANO" data-en="TUFTING · CREATIVE HOBBY · HANDMADE">TUFTING · HOBBY CREATIVO · FATTO A MANO</span></p>
-        <h1 data-it="Idee da <em>toccare.</em><br>Storie da <span class='highlight'>abitare.</span>" data-en="Ideas you can <em>touch.</em><br>Stories to <span class='highlight'>live with.</span>">Un’idea tua.<br>Un tappeto <span class="highlight">unico.</span></h1>
-        <p class="hero-intro" data-it="Il tufting è una passione che porto avanti nel tempo libero da tre anni, tra esperimenti, colori e idee personali. Qui raccolgo i lavori che realizzo e, mi piace ascoltare le vostre nuove ispirazioni. Mettiamo insieme le nostre passioni per creare qualcosa di bello." data-en="Tufting is a creative hobby I pursue in my free time, exploring colours, textures and personal ideas. Here I share the pieces I make and, when I can, I love hearing new inspirations.">Il tufting è una passione che porto avanti nel tempo libero, tra esperimenti, colori e idee personali. Qui raccolgo i lavori che realizzo e, quando riesco, mi piace ascoltare nuove ispirazioni.</p>
+        <p class="eyebrow">
+          <span class="dot"></span>
+          <span
+            data-it="TUFTING · HOBBY CREATIVO · FATTO A MANO"
+            data-en="TUFTING · CREATIVE HOBBY · HANDMADE">
+            TUFTING · HOBBY CREATIVO · FATTO A MANO
+          </span>
+        </p>
+
+        <h1
+          data-it="Idee da <em>toccare.</em><br>Storie da <span class='highlight'>abitare.</span>"
+          data-en="Ideas you can <em>touch.</em><br>Stories to <span class='highlight'>live with.</span>">
+          Idee da <em>toccare.</em><br>
+          Storie da <span class="highlight">abitare.</span>
+        </h1>
+
+        <p
+          class="hero-intro"
+          data-it="Il tufting è una passione che coltivo nel tempo libero, tra esperimenti, colori e idee personali. Qui raccolgo i lavori che realizzo e le ispirazioni che incontro lungo il percorso."
+          data-en="Tufting is a hobby I enjoy in my free time, exploring colours, textures and personal ideas. Here I share the pieces I make and the inspirations I discover along the way.">
+          Il tufting è una passione che coltivo nel tempo libero, tra esperimenti, colori e idee personali. Qui raccolgo i lavori che realizzo e le ispirazioni che incontro lungo il percorso.
+        </p>
+
         <div class="hero-buttons">
-          <a class="button button-dark" href="#gallery"><span data-it="ESPLORA I PROGETTI" data-en="EXPLORE THE PROJECTS">SCOPRI LE CATEGORIE</span><b>↘</b></a>
-          <a class="text-link" href="#commissions"><span data-it="Ti va di parlarne?" data-en="Want to chat?">Ti va di parlarne?</span> ↗</a>
+          <a class="button button-dark" href="#gallery">
+            <span data-it="ESPLORA I PROGETTI" data-en="EXPLORE THE PROJECTS">
+              ESPLORA I PROGETTI
+            </span>
+            <b>↘</b>
+          </a>
+
+          <a class="text-link" href="#commissions">
+            <span data-it="Ti va di parlarne?" data-en="Want to chat?">
+              Ti va di parlarne?
+            </span>
+            ↗
+          </a>
         </div>
       </div>
-<div class="hero-art" aria-label="Un lavoro di tufting realizzato a mano">
-  <img
-    src="images/out-tuft.jpg"
-    alt="Creazione artigianale realizzata con la tecnica del tufting"
-    style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;"
-  />
-  <span class="art-sticker">MADE<br>WITH CARE</span>
-  <span class="art-star">✳</span>
-</div>
-      <div class="hero-bottom"><span>ISPIRAZIONI CONDIVISE <span class="pink">✳</span></span><span>FATTO A MANO, CON CALMA <span class="pink">✳</span></span></div>
+
+      <div class="hero-art" aria-label="Un lavoro di tufting realizzato a mano">
+        <img
+          src="images/out-tuft.jpg"
+          alt="Creazione artigianale realizzata con la tecnica del tufting"
+          style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+
+        <span class="art-sticker">MADE<br>WITH CARE</span>
+        <span class="art-star">✳</span>
+      </div>
+
+      <div class="hero-bottom">
+        <span>
+          <span data-it="ISPIRAZIONI CONDIVISE" data-en="SHARED INSPIRATIONS">
+            ISPIRAZIONI CONDIVISE
+          </span>
+          <span class="pink">✳</span>
+        </span>
+
+        <span>
+          <span data-it="FATTO A MANO, CON CALMA" data-en="HANDMADE, AT MY OWN PACE">
+            FATTO A MANO, CON CALMA
+          </span>
+          <span class="pink">✳</span>
+        </span>
+      </div>
     </section>
 
-    <section class="ticker" aria-hidden="true"><div>PASSIONE PER IL TUFTING ✳ ESPERIMENTI CREATIVI ✳ IDEE E COLORI ✳ LAVORI FATTI A MANO ✳ PASSIONE PER IL TUFTING ✳ ESPERIMENTI CREATIVI ✳</div></section>
+    <section class="ticker" aria-hidden="true">
+      <div>
+        PASSIONE PER IL TUFTING ✳
+        ESPERIMENTI CREATIVI ✳
+        IDEE E COLORI ✳
+        LAVORI FATTI A MANO ✳
+        PASSIONE PER IL TUFTING ✳
+        ESPERIMENTI CREATIVI ✳
+      </div>
+    </section>
 
     <section class="gallery section-pad" id="gallery">
       <div class="section-heading">
-        <div><p class="eyebrow"><span class="dot"></span><span data-it="RICERCA VISIVA · IDEE APERTE" data-en="VISUAL RESEARCH · OPEN IDEAS">UNA GALLERIA MORBIDA</span></p>
-        <h2 data-it="Un universo di<br><em>possibilità.</em>" data-en="A universe of<br><em>possibilities.</em>">Cosa possiamo<br><em>creare insieme?</em></h2></div>
-        <p data-it="Una raccolta di prove e lavori personali: dai ritratti dei tuoi pelosi ai riferimenti anime e pop, fino a idee per la casa e sperimentazioni. Ogni tanto accolgo anche qualche spunto da chi mi scrive, in base al tempo che ho." data-en="A collection of experiments and personal pieces: from pet portraits to anime and pop references, home ideas and other explorations. From time to time, I may take inspiration from messages people send, depending on the time I have.">Ritratti, riferimenti pop, forme per gli interni e idee difficili da incasellare. Queste categorie sono solo un punto di partenza: possiamo mescolare linguaggi e ispirazioni per trovare il tuo.</p>
+        <div>
+          <p class="eyebrow">
+            <span class="dot"></span>
+            <span
+              data-it="RICERCA VISIVA · IDEE APERTE"
+              data-en="VISUAL RESEARCH · OPEN IDEAS">
+              RICERCA VISIVA · IDEE APERTE
+            </span>
+          </p>
+
+          <h2
+            data-it="Un universo di<br><em>possibilità.</em>"
+            data-en="A universe of<br><em>possibilities.</em>">
+            Un universo di<br><em>possibilità.</em>
+          </h2>
+        </div>
+
+        <p
+          data-it="Una raccolta di lavori personali, esperimenti e ispirazioni: dai ritratti degli animali ai riferimenti anime e pop, fino alle idee per la casa."
+          data-en="A collection of personal pieces, experiments and inspirations: from pet portraits to anime and pop references, home ideas and more.">
+          Una raccolta di lavori personali, esperimenti e ispirazioni: dai ritratti degli animali ai riferimenti anime e pop, fino alle idee per la casa.
+        </p>
       </div>
-     
-<div class="gallery-grid">
-  <article class="work-card card-tomato">
-    <div class="work-art">
-      <img src="images/dog2.jpg" alt="Tufting con cane" style="width:100%;height:100%;object-fit:cover;object-position:30% center;display:block;">
-    </div>
-    <div class="work-meta">
-      <div>
-        <h3 data-it="I tuoi pelosi" data-en="Your furry friends">I tuoi pelosi</h3>
-        <p data-it="Un ricordo tutto da coccolare" data-en="A keepsake to cuddle">Un ricordo tutto da coccolare</p>
+
+      <div class="gallery-grid">
+        <article
+          class="work-card card-tomato"
+          data-gallery-category="pets"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-label="Apri la categoria I tuoi pelosi">
+
+          <div class="work-art">
+            <img
+              src="images/dog2.jpg"
+              alt="Lavoro di tufting con cane"
+              style="width:100%;height:100%;object-fit:cover;object-position:30% center;display:block;">
+          </div>
+
+          <div class="work-meta">
+            <div>
+              <h3 data-it="I tuoi pelosi" data-en="Your furry friends">
+                I tuoi pelosi
+              </h3>
+              <p
+                data-it="Un ricordo tutto da coccolare"
+                data-en="A keepsake to cuddle">
+                Un ricordo tutto da coccolare
+              </p>
+            </div>
+            <span class="work-number">01</span>
+          </div>
+        </article>
+
+        <article
+          class="work-card card-blue"
+          data-gallery-category="anime"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-label="Apri la categoria Anime e pop culture">
+
+          <div class="work-art">
+            <img
+              src="images/rufy2.jpg"
+              alt="Progetto di tufting ispirato a Rufy"
+              style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+
+          <div class="work-meta">
+            <div>
+              <h3 data-it="Anime &amp; pop culture" data-en="Anime &amp; pop culture">
+                Anime &amp; pop culture
+              </h3>
+              <p
+                data-it="Personaggi e mondi che ami"
+                data-en="Characters and worlds you love">
+                Personaggi e mondi che ami
+              </p>
+            </div>
+            <span class="work-number">02</span>
+          </div>
+        </article>
+
+        <article
+          class="work-card card-yellow"
+          data-gallery-category="home"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-label="Apri la categoria Arredi">
+
+          <div class="work-art">
+            <img
+              src="images/arredo.jpg"
+              alt="Progetto di tufting per arredo"
+              style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+
+          <div class="work-meta">
+            <div>
+              <h3 data-it="Arredi" data-en="Home &amp; interiors">
+                Arredi
+              </h3>
+              <p
+                data-it="Colore e personalità per i tuoi spazi"
+                data-en="Colour and personality for your space">
+                Colore e personalità per i tuoi spazi
+              </p>
+            </div>
+            <span class="work-number">03</span>
+          </div>
+        </article>
+
+        <article
+          class="work-card card-lilac"
+          data-gallery-category="other"
+          tabindex="0"
+          role="button"
+          aria-haspopup="dialog"
+          aria-label="Apri la categoria Altre ispirazioni">
+
+          <div class="work-art" style="overflow:hidden;">
+            <img
+              src="images/piccolo-principe.jpg"
+              alt="Progetto di tufting ispirato al Piccolo Principe"
+              style="width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block;transform:scale(1.21);">
+          </div>
+
+          <div class="work-meta">
+            <div>
+              <h3 data-it="Altre ispirazioni" data-en="Other inspirations">
+                Altre ispirazioni
+              </h3>
+              <p
+                data-it="Idee e suggestioni da esplorare"
+                data-en="Ideas and inspirations to explore">
+                Idee e suggestioni da esplorare
+              </p>
+            </div>
+            <span class="work-number">04</span>
+          </div>
+        </article>
       </div>
-      <span class="work-number">01</span>
-    </div>
-  </article>
 
-<article class="work-card card-blue">
-  <div class="work-art">
-    <img src="images/rufy2.jpg" alt="Progetto tufting ispirato a Rufy" style="width:100%;height:100%;object-fit:cover;display:block;">
-  </div>
-  <div class="work-meta">
-    <div>
-      <h3>Anime &amp; pop culture</h3>
-      <p data-it="Personaggi e mondi che ami" data-en="Characters and worlds you love">Personaggi e mondi che ami</p>
-    </div>
-    <span class="work-number">02</span>
-  </div>
-</article>
-
-  <article class="work-card card-yellow">
-    <div class="work-art">
-      <img src="images/arredo.jpg" alt="Progetto tufting per arredo" style="width:100%;height:100%;object-fit:cover;display:block;">
-    </div>
-    <div class="work-meta">
-      <div>
-        <h3 data-it="Arredi" data-en="Home &amp; interiors">Arredi</h3>
-        <p data-it="Colore e personalità per i tuoi spazi" data-en="Colour and personality for your space">Colore e personalità per i tuoi spazi</p>
-      </div>
-      <span class="work-number">03</span>
-    </div>
-  </article>
-
-  <article class="work-card card-lilac">
-  <div class="work-art" style="overflow:hidden;">
-    <img src="images/piccolo-principe.jpg"
-         alt="Progetto ispirato al Piccolo Principe"
-         style="width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block;transform:scale(1.21);">
-  </div>
-
-  <div class="work-meta">
-    <div>
-      <h3 data-it="Altre ispirazioni" data-en="Other inspirations">Altre ispirazioni</h3>
-      <p data-it="Idee e suggestioni da esplorare" data-en="Ideas and inspirations to explore">Idee e suggestioni da esplorare</p>
-    </div>
-    <span class="work-number">04</span>
-  </div>
-</article>
-</div>
-
-      <p class="fine-print" data-it="Le grafiche sono provvisorie e servono solo a mostrare le categorie: saranno sostituite con foto dei lavori reali." data-en="These graphics are placeholders to introduce the categories and will be replaced with photos of actual pieces.">Ogni lavoro nasce da un’idea, prende forma tra colori e materiali e diventa un pezzo unico..</p>
+      <p
+        class="fine-print"
+        data-it="Ogni lavoro nasce da un’idea e prende forma tra colori, materiali e sperimentazione."
+        data-en="Every piece starts with an idea and takes shape through colours, materials and experimentation.">
+        Ogni lavoro nasce da un’idea e prende forma tra colori, materiali e sperimentazione.
+      </p>
     </section>
 
     <section class="about section-pad" id="about">
       <div class="about-stamp">OT<br><span>✳</span></div>
-      <div class="about-content"><p class="eyebrow"><span class="dot"></span><span data-it="PIACERE, OUT TUFT" data-en="NICE TO MEET YOU, OUT TUFT">CIAO, SONO OUT TUFT</span></p>
-        <h2 data-it="Ogni idea merita<br><em>la sua forma.</em>" data-en="Every idea deserves<br><em>its own shape.</em>">La tua idea.<br><em>La facciamo insieme.</em></h2>
-        <p data-it="Out Tuft è il nome che ho dato al mio angolo creativo dedicato al tufting, una passione che coltivo nel tempo libero. Qui condivido i lavori che mi diverto a realizzare, le prove e le ispirazioni che incontro. Se hai un’idea o un riferimento che ti piacerebbe raccontarmi, scrivimi pure: ogni tanto, se il tempo e le energie lo permettono, mi fa piacere ragionare insieme su qualcosa di speciale." data-en="Out Tuft is the name I gave to my little creative corner dedicated to tufting, a hobby I enjoy in my free time. Here I share the pieces I have fun making, experiments and inspirations I come across. If you have an idea or reference you would like to tell me about, feel free to send a message: from time to time, if time and energy allow, I enjoy exploring something special together.">Out Tuft nasce dal desiderio di dare forma alle idee delle persone. Possiamo progettare insieme il tuo tappeto: partiamo da ciò che ami, da un ricordo, da un personaggio o dai colori che immagini, e troviamo la soluzione giusta per te. Ogni progetto è una piccola collaborazione, realizzata a mano con attenzione.</p>
-        <a class="text-link" href="https://www.instagram.com/out_tuft/" target="_blank" rel="noreferrer"><span data-it="SEGUI LA RICERCA SU INSTAGRAM" data-en="FOLLOW THE PROCESS ON INSTAGRAM">VEDI I PROGETTI SU INSTAGRAM</span> ↗</a>
+
+      <div class="about-content">
+        <p class="eyebrow">
+          <span class="dot"></span>
+          <span data-it="PIACERE, OUT TUFT" data-en="NICE TO MEET YOU, OUT TUFT">
+            PIACERE, OUT TUFT
+          </span>
+        </p>
+
+        <h2
+          data-it="Ogni idea merita<br><em>la sua forma.</em>"
+          data-en="Every idea deserves<br><em>its own shape.</em>">
+          Ogni idea merita<br><em>la sua forma.</em>
+        </h2>
+
+        <p
+          data-it="Out Tuft è il nome che ho dato al mio angolo creativo dedicato al tufting, una passione che coltivo nel tempo libero. Qui condivido i lavori che mi diverto a realizzare, le prove e le ispirazioni che incontro. Se hai un’idea o un riferimento che ti piacerebbe raccontarmi, scrivimi pure: ogni tanto, se il tempo e le energie lo permettono, mi fa piacere ragionare insieme su qualcosa di speciale."
+          data-en="Out Tuft is the name I gave to my little creative corner dedicated to tufting, a hobby I enjoy in my free time. Here I share the pieces I have fun making, experiments and inspirations I come across. If you have an idea or reference you would like to tell me about, feel free to send a message: from time to time, if time and energy allow, I enjoy exploring something special together.">
+          Out Tuft è il nome che ho dato al mio angolo creativo dedicato al tufting, una passione che coltivo nel tempo libero. Qui condivido i lavori che mi diverto a realizzare, le prove e le ispirazioni che incontro. Se hai un’idea o un riferimento che ti piacerebbe raccontarmi, scrivimi pure: ogni tanto, se il tempo e le energie lo permettono, mi fa piacere ragionare insieme su qualcosa di speciale.
+        </p>
+
+        <a
+          class="text-link"
+          href="https://www.instagram.com/out_tuft/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <span
+            data-it="SEGUI LA RICERCA SU INSTAGRAM"
+            data-en="FOLLOW THE PROCESS ON INSTAGRAM">
+            SEGUI LA RICERCA SU INSTAGRAM
+          </span>
+          ↗
+        </a>
       </div>
+
       <div class="about-side" aria-label="Video del processo di tufting">
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    controls
-    style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;"
-  >
-    <source src="images/cucitura.mp4" type="video/mp4">
-    Il tuo browser non supporta la riproduzione del video.
-  </video>
-</div>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+          <source src="images/cucitura.mp4" type="video/mp4">
+          Il tuo browser non supporta la riproduzione del video.
+        </video>
+      </div>
     </section>
 
     <section class="commissions section-pad" id="commissions">
       <div class="commission-shape">✳</div>
-      <p class="eyebrow"><span class="dot"></span><span data-it="TI VA DI FARE DUE CHIACCHIERE?" data-en="FANCY A LITTLE CHAT?">TI VA DI FARE DUE CHIACCHIERE?</span></p>
-      <h2 data-it="Hai un’idea?<br><em>Raccontamela.</em>" data-en="Have an idea?<br><em>Tell me about it.</em>">Hai un’idea<br><em>in mente?</em></h2>
-      <p class="commission-copy" data-it="Se ti incuriosisce un lavoro o vuoi condividere un’idea, puoi scrivermi su Instagram senza impegno. Il tufting per me è un hobby: non prendo richieste in modo continuativo e posso valutare eventuali progetti solo quando ho tempo libero." data-en="If a piece catches your eye or you would like to share an idea, feel free to message me on Instagram with no pressure. Tufting is a hobby for me: I don’t take requests on an ongoing basis and can only consider possible projects when I have free time.">Non serve avere tutto già deciso. Raccontami cosa vorresti realizzare: possiamo confrontarci su idee, forme, colori e dimensioni e progettare insieme qualcosa che ti somigli.</p>
-      <a class="button button-pink" href="https://www.instagram.com/out_tuft/" target="_blank" rel="noreferrer"><span data-it="SCRIVIMI SU INSTAGRAM" data-en="SAY HI ON INSTAGRAM">PROGETTIAMO INSIEME</span><b>↗</b></a>
-      <span class="commission-foot" data-it="NESSUNA FRETTA, SOLO CREATIVITÀ ✳" data-en="NO RUSH, JUST CREATIVITY ✳">PARTIAMO DALLA TUA IDEA ✳</span>
+
+      <p class="eyebrow">
+        <span class="dot"></span>
+        <span
+          data-it="TI VA DI FARE DUE CHIACCHIERE?"
+          data-en="FANCY A LITTLE CHAT?">
+          TI VA DI FARE DUE CHIACCHIERE?
+        </span>
+      </p>
+
+      <h2
+        data-it="Hai un’idea?<br><em>Raccontamela.</em>"
+        data-en="Have an idea?<br><em>Tell me about it.</em>">
+        Hai un’idea?<br><em>Raccontamela.</em>
+      </h2>
+
+      <p
+        class="commission-copy"
+        data-it="Se ti incuriosisce un lavoro o vuoi condividere un’idea, puoi scrivermi su Instagram senza impegno. Il tufting per me è un hobby: non prendo richieste in modo continuativo e posso valutare eventuali progetti solo quando ho tempo libero."
+        data-en="If a piece catches your eye or you would like to share an idea, feel free to message me on Instagram with no pressure. Tufting is a hobby for me: I don’t take requests on an ongoing basis and can only consider possible projects when I have free time.">
+        Se ti incuriosisce un lavoro o vuoi condividere un’idea, puoi scrivermi su Instagram senza impegno. Il tufting per me è un hobby: non prendo richieste in modo continuativo e posso valutare eventuali progetti solo quando ho tempo libero.
+      </p>
+
+      <a
+        class="button button-pink"
+        href="https://www.instagram.com/out_tuft/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span data-it="SCRIVIMI SU INSTAGRAM" data-en="SAY HI ON INSTAGRAM">
+          SCRIVIMI SU INSTAGRAM
+        </span>
+        <b>↗</b>
+      </a>
+
+      <span
+        class="commission-foot"
+        data-it="NESSUNA FRETTA, SOLO CREATIVITÀ ✳"
+        data-en="NO RUSH, JUST CREATIVITY ✳">
+        NESSUNA FRETTA, SOLO CREATIVITÀ ✳
+      </span>
     </section>
   </main>
 
   <footer class="footer">
     <a class="wordmark footer-mark" href="#home" aria-label="Out Tuft - Home">
-  <img src="images/out-tuft.jpg" alt="Out Tuft" style="height:40px;width:auto;display:block;">
-</a>
-    <p data-it="Un hobby creativo, condiviso con voi." data-en="A creative hobby, shared with you.">Creazioni tuftate, pensate insieme.</p>
-    <a href="https://www.instagram.com/out_tuft/" target="_blank" rel="noreferrer">@out_tuft ↗</a>
+      <img
+        src="images/out-tuft.jpg"
+        alt="Out Tuft"
+        style="height:40px;width:auto;display:block;">
+    </a>
+
+    <p
+      data-it="Un hobby creativo, condiviso con voi."
+      data-en="A creative hobby, shared with you.">
+      Un hobby creativo, condiviso con voi.
+    </p>
+
+    <a
+      href="https://www.instagram.com/out_tuft/"
+      target="_blank"
+      rel="noopener noreferrer">
+      @out_tuft ↗
+    </a>
+
     <small>© <span id="year"></span> OUT TUFT</small>
   </footer>
+
+  <div
+    class="gallery-modal"
+    id="galleryModal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="galleryModalTitle">
+
+    <div class="gallery-modal-panel">
+      <div class="gallery-modal-heading">
+        <div>
+          <p class="eyebrow">
+            <span class="dot"></span>
+            <span data-it="DALLA GALLERIA" data-en="FROM THE GALLERY">
+              DALLA GALLERIA
+            </span>
+          </p>
+          <h2 id="galleryModalTitle">I tuoi pelosi</h2>
+        </div>
+
+        <button
+          class="modal-close"
+          id="galleryModalClose"
+          type="button"
+          aria-label="Chiudi la galleria">
+          ✕
+        </button>
+      </div>
+
+      <div class="modal-project-grid" id="modalProjectGrid"></div>
+
+      <p
+        class="modal-note"
+        data-it="Nuovi lavori verranno aggiunti qui man mano che li realizzo."
+        data-en="New pieces will be added here as I make them.">
+        Nuovi lavori verranno aggiunti qui man mano che li realizzo.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="image-lightbox"
+    id="imageLightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Immagine ingrandita">
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Chiudi immagine">
+      ✕
+    </button>
+
+    <img id="lightboxImage" src="" alt="">
+    <p id="lightboxCaption"></p>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
