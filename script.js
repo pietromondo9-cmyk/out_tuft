@@ -17,65 +17,73 @@ let currentLanguage = 'it';
 let activeCategory = null;
 let lastFocusedElement = null;
 
-
 const galleryData = [
   {
-    id: "pets",
-    title: "Animali",
+    id: 'pets',
+    title: { it: 'Animali', en: 'Pets' },
     projects: [
       {
-        title: "Dog Rug",
-        image: "images/dog2.jpg"
+        title: { it: 'Dog Rug', en: 'Dog Rug' },
+        image: 'images/dog2.jpg',
+        alt: { it: 'Tappeto con cane', en: 'Dog rug' }
       }
     ]
   },
   {
-    id: "anime",
-    title: "Anime",
+    id: 'anime',
+    title: { it: 'Anime', en: 'Anime' },
     projects: [
       {
-        title: "Rufy",
-        image: "images/rufy2.jpg"
+        title: { it: 'Rufy', en: 'Luffy' },
+        image: 'images/rufy2.jpg',
+        alt: { it: 'Progetto ispirato a Rufy', en: 'Luffy-inspired project' }
       },
       {
-        title: "Rufy Portrait",
-        image: "images/rufy.PNG"
+        title: { it: 'Rufy Portrait', en: 'Luffy Portrait' },
+        image: 'images/rufy.PNG',
+        alt: { it: 'Ritratto di Rufy', en: 'Luffy portrait' }
       },
       {
-        title: "Brook",
-        image: "images/brook.jpg"
+        title: { it: 'Brook', en: 'Brook' },
+        image: 'images/brook.jpg',
+        alt: { it: 'Progetto ispirato a Brook', en: 'Brook-inspired project' }
       },
       {
-        title: "Zapdos",
-        image: "images/zapdos.PNG"
+        title: { it: 'Zapdos', en: 'Zapdos' },
+        image: 'images/zapdos.PNG',
+        alt: { it: 'Progetto ispirato a Zapdos', en: 'Zapdos-inspired project' }
       }
     ]
   },
   {
-    id: "home",
-    title: "Arredamento",
+    id: 'home',
+    title: { it: 'Arredamento', en: 'Home & interiors' },
     projects: [
       {
-        title: "Arredo",
-        image: "images/arredo.jpg"
+        title: { it: 'Arredo', en: 'Interior design' },
+        image: 'images/arredo.jpg',
+        alt: { it: 'Progetto per arredamento', en: 'Interior design project' }
       }
     ]
   },
   {
-    id: "other",
-    title: "Altro",
+    id: 'other',
+    title: { it: 'Altro', en: 'Other inspirations' },
     projects: [
       {
-        title: "Il Piccolo Principe",
-        image: "images/piccolo-principe.jpg"
+        title: { it: 'Il Piccolo Principe', en: 'The Little Prince' },
+        image: 'images/piccolo-principe.jpg',
+        alt: { it: 'Progetto ispirato al Piccolo Principe', en: 'Little Prince-inspired project' }
       },
       {
-        title: "Platone",
-        image: "images/platone.jpg"
+        title: { it: 'Platone', en: 'Plato' },
+        image: 'images/platone.jpg',
+        alt: { it: 'Progetto ispirato a Platone', en: 'Plato-inspired project' }
       },
       {
-        title: "Bitcoin",
-        image: "images/btc-logo.jpg"
+        title: { it: 'Bitcoin', en: 'Bitcoin' },
+        image: 'images/btc-logo.jpg',
+        alt: { it: 'Progetto con simbolo Bitcoin', en: 'Bitcoin symbol project' }
       }
     ]
   }
@@ -105,7 +113,7 @@ languageToggle?.addEventListener('click', () => {
   setLanguage(currentLanguage === 'it' ? 'en' : 'it');
 });
 
-/* Apertura delle schede */
+/* Apertura e chiusura categorie */
 
 function openCategory(category, card) {
   activeCategory = category;
@@ -118,7 +126,7 @@ function openCategory(category, card) {
   galleryModal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('modal-open');
 
-  galleryModalClose.focus();
+  galleryModalClose?.focus();
 }
 
 function closeCategory() {
@@ -127,7 +135,7 @@ function closeCategory() {
   document.body.classList.remove('modal-open');
   activeCategory = null;
 
-  if (lastFocusedElement) lastFocusedElement.focus();
+  lastFocusedElement?.focus();
 }
 
 document.querySelectorAll('[data-gallery-category]').forEach(card => {
@@ -155,27 +163,29 @@ galleryModal?.addEventListener('click', event => {
   if (event.target === galleryModal) closeCategory();
 });
 
-/* Immagini dentro la galleria */
+/* Progetti della categoria */
 
 function renderCategory(category) {
+  if (!modalProjectGrid) return;
+
   modalProjectGrid.innerHTML = '';
 
-  category.items.forEach(item => {
+  category.projects.forEach(project => {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'modal-project';
-    button.setAttribute('aria-label', item.title[currentLanguage]);
+    button.setAttribute('aria-label', project.title[currentLanguage]);
 
     const image = document.createElement('img');
-    image.src = item.src;
-    image.alt = item.alt[currentLanguage];
+    image.src = project.image;
+    image.alt = project.alt[currentLanguage];
     image.loading = 'lazy';
 
     const caption = document.createElement('p');
-    caption.textContent = item.title[currentLanguage];
+    caption.textContent = project.title[currentLanguage];
 
     button.append(image, caption);
-    button.addEventListener('click', () => openLightbox(item));
+    button.addEventListener('click', () => openLightbox(project));
 
     modalProjectGrid.appendChild(button);
   });
@@ -183,14 +193,14 @@ function renderCategory(category) {
 
 /* Immagine ingrandita */
 
-function openLightbox(item) {
-  lightboxImage.src = item.src;
-  lightboxImage.alt = item.alt[currentLanguage];
-  lightboxCaption.textContent = item.title[currentLanguage];
+function openLightbox(project) {
+  lightboxImage.src = project.image;
+  lightboxImage.alt = project.alt[currentLanguage];
+  lightboxCaption.textContent = project.title[currentLanguage];
 
   imageLightbox.classList.add('is-open');
   imageLightbox.setAttribute('aria-hidden', 'false');
-  lightboxClose.focus();
+  lightboxClose?.focus();
 }
 
 function closeLightbox() {
@@ -205,14 +215,14 @@ imageLightbox?.addEventListener('click', event => {
   if (event.target === imageLightbox) closeLightbox();
 });
 
-/* Tasto Esc: chiude prima l'immagine, poi la galleria */
+/* Tasto Esc */
 
 document.addEventListener('keydown', event => {
   if (event.key !== 'Escape') return;
 
-  if (imageLightbox.classList.contains('is-open')) {
+  if (imageLightbox?.classList.contains('is-open')) {
     closeLightbox();
-  } else if (galleryModal.classList.contains('is-open')) {
+  } else if (galleryModal?.classList.contains('is-open')) {
     closeCategory();
   }
 });
