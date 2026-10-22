@@ -1080,3 +1080,71 @@ h2 em {
     transition-duration: 0.01ms !important;
   }
 }
+
+.tuft-video-section {
+  padding: 70px 6%;
+  text-align: center;
+}
+
+.tuft-video-heading {
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+.tuft-video-heading span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.tuft-video-heading h2 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 14px 0;
+}
+
+.tuft-video-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.tuft-video-frame {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #171717;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+}
+
+.tuft-video-frame video {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.tuft-video-caption {
+  padding: 14px;
+  color: white;
+  background: #171717;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .tuft-video-section {
+    padding: 45px 5%;
+  }
+
+  .tuft-video-frame {
+    border-radius: 14px;
+  }
+
+  .tuft-video-frame video {
+    aspect-ratio: 4 / 5;
+  }
+}
