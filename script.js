@@ -1,34 +1,123 @@
-const toggle = document.getElementById('languageToggle');
+/* =========================================
+   OUT TUFT — SCRIPT PRINCIPALE
+   Lingue, menu mobile e galleria espandibile
+   ========================================= */
+
+const languageToggle = document.getElementById('languageToggle');
 const menuToggle = document.getElementById('menuToggle');
+const desktopNav = document.querySelector('.desktop-nav');
+const siteHeader = document.querySelector('.site-header');
+
 let currentLanguage = 'it';
+let activeCategory = null;
+let lastFocusedElement = null;
 
-function setLanguage(language) {
-  currentLanguage = language;
-  document.documentElement.lang = language;
-  document.querySelectorAll('[data-it][data-en]').forEach((element) => {
-    const value = element.getAttribute(`data-${language}`);
-    if (value !== null) element.innerHTML = value;
-  });
-  toggle.textContent = language === 'it' ? 'EN ↗' : 'IT ↗';
-  document.title = language === 'it'
-    ? 'Out Tuft — Un hobby di tufting'
-    : 'Out Tuft — A tufting hobby';
-}
-toggle.addEventListener('click', () => setLanguage(currentLanguage === 'it' ? 'en' : 'it'));
-document.getElementById('year').textContent = new Date().getFullYear();
+/*
+  GALLERIA DEI PROGETTI
 
-const nav = document.querySelector('.desktop-nav');
-const mobileNav = nav.cloneNode(true);
-mobileNav.classList.add('mobile-nav');
-mobileNav.id = 'mobileNav';
-document.querySelector('.site-header').insertAdjacentElement('afterend', mobileNav);
-menuToggle.addEventListener('click', () => {
-  const isOpen = mobileNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.textContent = isOpen ? '✕' : '☰';
-});
-mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-  menuToggle.textContent = '☰';
-}));
+  Per aggiungere un lavoro:
+  1. Carica la nuova immagine nella cartella images del repository.
+  2. Aggiungi un nuovo oggetto nella lista "items" della categoria corretta.
+  3. Usa il percorso esatto del file, rispettando maiuscole e minuscole.
+
+  Esempio:
+  {
+    src: 'images/nuovo-lavoro.jpg',
+    title: {
+      it: 'Il mio nuovo lavoro',
+      en: 'My new piece'
+    },
+    alt: {
+      it: 'Descrizione della foto',
+      en: 'Photo description'
+    }
+  }
+
+  Non inserire immagini che non hai ancora caricato.
+*/
+
+const galleryData = [
+  {
+    id: 'pets',
+    title: {
+      it: 'I tuoi pelosi',
+      en: 'Your furry friends'
+    },
+    description: {
+      it: 'Ritratti e ricordi dedicati agli amici a quattro zampe.',
+      en: 'Portraits and keepsakes dedicated to our four-legged friends.'
+    },
+    items: [
+      {
+        src: 'images/dog2.jpg',
+        title: {
+          it: 'Un amico speciale',
+          en: 'A special friend'
+        },
+        alt: {
+          it: 'Lavoro di tufting con cane',
+          en: 'Tufting artwork featuring a dog'
+        }
+      }
+
+      /*
+        AGGIUNGI QUI ALTRI LAVORI DELLA STESSA CATEGORIA.
+
+        Per esempio, dopo la prima immagine, aggiungi una virgola
+        e poi un nuovo oggetto con src, title e alt.
+      */
+    ]
+  },
+
+  {
+    id: 'anime',
+    title: {
+      it: 'Anime & pop culture',
+      en: 'Anime & pop culture'
+    },
+    description: {
+      it: 'Personaggi, storie e mondi che ispirano i miei lavori.',
+      en: 'Characters, stories and worlds that inspire my work.'
+    },
+    items: [
+      {
+        src: 'images/rufy2.jpg',
+        title: {
+          it: 'Rufy',
+          en: 'Luffy'
+        },
+        alt: {
+          it: 'Progetto di tufting ispirato a Rufy',
+          en: 'Tufting artwork inspired by Luffy'
+        }
+      }
+    ]
+  },
+
+  {
+    id: 'home',
+    title: {
+      it: 'Arredi',
+      en: 'Home & interiors'
+    },
+    description: {
+      it: 'Idee per portare texture, colore e personalità negli spazi.',
+      en: 'Ideas for bringing texture, colour and personality into a space.'
+    },
+    items: [
+      {
+        src: 'images/arredo.jpg',
+        title: {
+          it: 'Un dettaglio per la casa',
+          en: 'A detail for the home'
+        },
+        alt: {
+          it: 'Progetto di tufting per arredo',
+          en: 'Tufting artwork for the home'
+        }
+      }
+    ]
+  },
+
+  {
+    id: 'other
